@@ -1,5 +1,10 @@
 # Tenpo
 
+## To run this service please type the below command in terminal:
+```
+mvn clean install spring-boot:run
+```
+  
 ## Deploy the build in Docker: 
 ```
 docker build --build-arg JAR_FILE=target/*.jar -t  Tenpo-1.0.jar
@@ -18,7 +23,9 @@ POSTGRES_PASSWORD=
 POSTGRES_DB=TenpoDB
 ```
   
-PostMan collection can be found [here](https://github.com/ashokchakravarthi/tenpo/blob/master/Tenpo%20Collection.postman_collection.json)
+## Schema created for this service named **db_schema_1**
+  
+## PostMan collection can be found [here](https://github.com/ashokchakravarthi/tenpo/blob/master/Tenpo%20Collection.postman_collection.json)
 
   
 ## Screenshot of the service:
