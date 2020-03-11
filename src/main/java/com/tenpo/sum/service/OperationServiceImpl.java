@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -25,8 +26,8 @@ public class OperationServiceImpl implements OperationService
     }
 
     @Override
-    public Optional<Operation> getAllHistory(Long userID)
+    public List<Operation> getAllHistory(Long userID)
     {
-        return operationRepository.findById(userID);
+        return operationRepository.getAllHistory(userID);
     }
 }

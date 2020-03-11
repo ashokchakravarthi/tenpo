@@ -21,7 +21,7 @@ public class Operation {
     private int answer;
 
     @Column(name = "user_id", updatable = false, nullable = false)
-    private int user_id;
+    private Long user_id;
 
     public Long getId() {
         return id;
@@ -55,11 +55,11 @@ public class Operation {
         this.answer = answer;
     }
 
-    public int getUser_id() {
+    public Long getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(int user_id) {
+    public void setUser_id(Long user_id) {
         this.user_id = user_id;
     }
 }

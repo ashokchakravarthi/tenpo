@@ -21,17 +21,17 @@
     </c:if>
   </div>
 
-  <div class="form-group ${error != null ? 'has-error' : ''}">
+  <div class="form-signin">
   <h2 class="form-heading">Operation</h2>
      <input id="value1" type="text" class="form-control" placeholder="Value 1" autofocus="true"/>
      <input id="value2" type="text" class="form-control" placeholder="Value 2" />
-     <input id="answer" type="text" class="form-control" readonly/>
+     <input id="answer" type="text" class="form-control" placeholder="Answer" readonly/>
 
      <button class="btn btn-lg btn-primary btn-block" onclick="addNumbers()">Add</button>
  </div>
- <div class="form-group ${error != null ? 'has-error' : ''}">
-    <h2 class="form-heading">History</h2>
-   <p id="history"> </p>
+ <div class="form-signin">
+    <h2 class="form-heading">Activity Log</h2>
+   <p id="log"> </p>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -48,9 +48,7 @@
           xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200)
             {
-              var responseText = document.getElementById("history").innerHTML;
-              responseText = responseText + "<br>" + value1 + " + " + value2 + " = " + answer.value;
-              document.getElementById("history").innerHTML = responseText;
+              document.getElementById("log").innerHTML = JSON.parse(this.response).result;
             }
           };
           xhttp.open("POST", "api/persist", true);
