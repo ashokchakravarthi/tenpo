@@ -79,7 +79,7 @@ public class OperationController
         for(Operation operationElement: operationArrayList)
         {
             res.append(operationElement.getValue1() + " + " + operationElement.getValue2() + " = " + operationElement.getAnswer());
-            res.append("<br>");
+            res.append(" <br> ");
         }
 
         result.setResult(res.toString());
