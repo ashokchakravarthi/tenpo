@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "ce57ab70-94f4-4e11-ac5e-a73b9b0f78ad",
+		"name": "Tenpo Collection",
+		"description": "This collection helps to run test cases for Tenpo Addition service.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Addition Validation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"value1\":\"32\",\"value2\":\"32\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Addition Validation Invalid value",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"value1\":\"32\",\"value2\":\"32\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Addition Validation negative value",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"value1\":\"32\",\"value2\":\"32\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persist"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "bc9178e9-3400-4039-bc66-f79af7f0ab1f",
+			"value": "",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
